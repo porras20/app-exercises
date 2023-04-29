@@ -1,15 +1,23 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import { useState } from "react";
+import "./App.css";
+import { Route, Routes } from "react-router-dom";
+import { Box } from "@mui/material";
+import Home from "./pages/Home";
+import ExerciseDetail from "./pages/ExerciseDetail";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div>
-      <h1>App</h1>
-    </div>
-  )
+    <Box width="400px" sx={{ width: { xl: "1488px" } }} m="auto">
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/exercise/:id" element={<ExerciseDetail />} />
+      </Routes>
+      <Footer />
+    </Box>
+  );
 }
 
-export default App
+export default App;
