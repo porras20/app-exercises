@@ -15,7 +15,6 @@ export default function BodyPart({ item, setBodyPart, bodyPart }) {
         cursor: 'pointer',
         width: "170px", 
         height: "180px",
-        cursor: 'pointer',
         gap: '47px'
       }
       }
